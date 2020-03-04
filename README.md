@@ -1,2 +1,2 @@
 # go
-starter
+getting started
