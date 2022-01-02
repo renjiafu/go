@@ -17,7 +17,6 @@ func main() {
 
 	fmt.Printf("Now you hava %g problems.\n", math.Sqrt(7))
 
-	
 }
 
 // go语言数据类型

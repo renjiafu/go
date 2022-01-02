@@ -1,10 +1,10 @@
 package main
 
 import (
-	"time"
-	"runtime"
-	"math"
 	"fmt"
+	"math"
+	"runtime"
+	"time"
 )
 
 func sqrt(x float64) string {
@@ -14,11 +14,11 @@ func sqrt(x float64) string {
 	return fmt.Sprint(math.Sqrt(x))
 }
 
-func pow (x,n,lim float64) float64{
-	if v:=math.Pow(x,n);v<lim{
+func pow(x, n, lim float64) float64 {
+	if v := math.Pow(x, n); v < lim {
 		return v
-	}else{
-		fmt.Printf("%g >= %g",v,lim)
+	} else {
+		fmt.Printf("%g >= %g", v, lim)
 	}
 	return lim
 }
@@ -47,40 +47,39 @@ func main() {
 		}
 	*/
 
-	fmt.Println(sqrt(2),sqrt(-4))
+	fmt.Println(sqrt(2), sqrt(-4))
 
-	fmt.Println(pow(3,3,20))
+	fmt.Println(pow(3, 3, 20))
 
-	switch os:= runtime.GOOS;os{
+	switch os := runtime.GOOS; os {
 	case "sarwin":
 		fmt.Println("OS X.")
 	case "linux":
 		fmt.Println("Linux.")
-	default :
-	fmt.Printf("%s.",os)
+	default:
+		fmt.Printf("%s.", os)
 	}
-	ti:=time.Now()
+	ti := time.Now()
 	switch {
-	case ti.Hour()<12:
+	case ti.Hour() < 12:
 		fmt.Println("Good morning!")
-	case ti.Hour()<17:
+	case ti.Hour() < 17:
 		fmt.Println("Good afternoon.")
-	default :
+	default:
 		fmt.Println("Good evening")
 
 	}
 
-/* 	
-	延迟计算
-	defer fmt.Println("world!")
-	fmt.Println("hello ")
+	/*
+		延迟计算
+		defer fmt.Println("world!")
+		fmt.Println("hello ")
 
- */	
- 	fmt.Println("counting")
-	for i:=0;i<10;i++{
+	*/
+	fmt.Println("counting")
+	for i := 0; i < 10; i++ {
 		defer fmt.Println(i)
 	}
 	fmt.Println("done")
-
 
 }
