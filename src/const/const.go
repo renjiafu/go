@@ -3,6 +3,6 @@ package main
 import "fmt"
 
 func main() {
-	const Pi = 3.14
-	fmt.Println("pi :", Pi)
+	const PI = 3.14
+	fmt.Println("常量 -->", "pi", PI)
 }
