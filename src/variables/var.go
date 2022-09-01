@@ -1,31 +1,27 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"reflect"
+)
 
 func main() {
 
 	//三种初始化
 	var i int
-	fmt.Println(i)
+	fmt.Println("第一种初始化方式 --> ", i)
 
-	var k, v, s = true, false, "no!"
-	fmt.Println(i, k, v, s)
+	var isDone, isFinished, isRed = true, false, "no!"
+	fmt.Println("第二种初始化方式 --> ", "isDone", isDone, "isFinished", isFinished, "isRed", isRed)
 
-	x := 3
-	y, z := "y", "z"
-	fmt.Println(x, y, z)
-
-	//默认初始化
-	var f float64
-	var b bool
-	var str string
-	fmt.Printf("%v %v %q\n", f, b, str)
+	i2 := 3
+	firstName, lastName := "y", "z"
+	fmt.Println("第三种初始化方式 --> ", "i2", i2, "firstName", firstName, "lastName", lastName)
 
 	//类型转换
-	o := 33
-	d := float64(o)
-	u := uint(d)
-	fmt.Println(o, d, u)
+	f := float64(i)
+	u := uint(i)
+	fmt.Println("类型转换 --> ", "f", reflect.TypeOf(f), f, "u", reflect.TypeOf(u), u)
 
 }
 
